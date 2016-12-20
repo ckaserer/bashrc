@@ -1,0 +1,8 @@
+#!/bin/bash
+
+export CLICOLOR=1
+
+UC=$COLOR_LIGHT_GREEN               # user's color
+[ $UID -eq "0" ] && UC=$COLOR_RED   # root's color
+
+PS1="\n\[${COLOR_LIGHT_GRAY}\]\t \[${UC}\]\u \[${COLOR_LIGHT_CYAN}\]\h \[${COLOR_YELLOW}\]\${PWD} \n\[${COLOR_LIGHT_GREEN}\]→\[${COLOR_NC}\] "

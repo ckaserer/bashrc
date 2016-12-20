@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#pbm@tauri ~ $ shopt -s autocd
+#pbm@tauri ~ $ django # Now just type this
+#cd ./django    <- it's done automatically
+#pbm@tauri ~/django $
+shopt -s autocd > /dev/null 2>&1

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#with this line .bashrc.config can be anywhere on your system
+MY_BASHRC="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"/*.active
+
+for CONFIG in ${MY_BASHRC}
+do
+	if [ -f "$CONFIG" ]
+	then
+		. ${CONFIG}
+	fi
+done
