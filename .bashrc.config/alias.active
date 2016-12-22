@@ -41,4 +41,4 @@ alias bashrc='vim ~/.bashrc'
 
 ###########
 #count Lines of Code
-alias loc='find . \( ! -regex ".*/\..*" \) -type f ! -name "*.png" | xargs wc -l'
+alias loc='find . \( ! -regex ".*/\..*" \) -type f \( -name "*.sh" -o -name "*.py" -o -name ".md" -o -name "*.yml" -o -name "*.yaml" -o -name "Dockerfile" -o -name "*.txt" -o -name "Vagrantfile" -o -name "*.tex" -o -name "*.cls" -o -name "*.sty" -o -name "*.conf" -o -name "*.cfg" -o -name "*.msg" \) | xargs wc -l'
