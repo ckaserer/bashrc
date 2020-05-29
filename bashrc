@@ -1,11 +1,26 @@
 # .bash_profile
 
 # User specific environment and startup programs
-export PATH=$PATH:/Library/TeX/texbin:/usr/local/bin:~/bin:~/lib:~/.minishift/cache/oc/v1.5.1:$HOME/bin
+# export PATH=$PATH:/usr/local/bin:~/bin:~/lib:$HOME/bin
 
 #################################################################
 # User specific aliases and functions
 #################################################################
+
+# docker cleanup
+function dclean() {
+    echo "+ docker rm $(docker ps -aq --filter 'status=exited')" && docker rm $(docker ps -aq --filter 'status=exited') 2&>/dev/null
+    echo "+ docker image rm -f $(docker image ls -q)" && docker image rm -f $(docker image ls -q) 2&>/dev/null
+}
+readonly -f dclean
+[ "$?" -eq "0" ] || return $?
+
+# docker interactive and cleanup
+function di() {
+    echo "+ docker run --rm -it $@" && docker run --rm -it $@
+}
+readonly -f di
+[ "$?" -eq "0" ] || return $?
 
 ###########
 # git branch for PS1
@@ -54,8 +69,6 @@ alias lla='ls -a'
 # macOS does not support --color=auto
 export GREP_OPTS=' -in' 
 export GREP_COLOR='1;32'
-
-grep --color=auto > /dev/null 2>&1 && alias grep='grep ${GREP_OPTS} --color=auto' || alias grep='grep ${GREP_OPTS}'
 
 ###########
 # text editor
