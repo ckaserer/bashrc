@@ -2,7 +2,7 @@
 ![Maintenance](https://img.shields.io/maintenance/yes/2020?style=flat-square)
 # bashrc
 
-If you work most of the time on the CLI like I do you might want to add a bit of color to your life. With this customized bashrc you get a bash prompt streched over 2 line so you can easily see the user, host, path and git branch if you are in a git repository at a glance. In addition `ls` and `grep` are colorized if your system supports it.
+If you work most of the time on the CLI, like I do, you might want to add a bit of color to your life. With this customized bashrc you get a bash prompt streched over 2 line so you can easily see the user, host, path and git branch if you are in a git repository at a glance. In addition `ls` and `grep` are colorized if your system supports it.
 
 <p align="center">
 <img alt="git" src="./.images/git.png">
