@@ -20,16 +20,16 @@ If you work most of the time on the CLI like I do you might want to add a bit of
 First we clone the repository to your machine via
 
 ```
-git clone https://github.com/ckaserer/bash-bashrc.git
+git clone https://github.com/ckaserer/bashrc.git
 ```
 
 Next we need to configure your `~/.bashrc` to source the content of the `bashrc` file from the repo. We can do that by adding the following line to the end of your `~/.bashrc`.
 
 ```
-if [ -f /path/to/bash-bashrc/bashrc ]; then . /path/to/bash-bashrc/bashrc; fi
+if [ -f /path/to/bashrc/bashrc ]; then . /path/to/bashrc/bashrc; fi
 ```
 
-What did we do just now?! We added a line to your bashrc which sources the `/path/to/bash-bashrc/bashrc` file if the file exists.
+What did we do just now?! We added a line to your bashrc which sources the `/path/to/bashrc/bashrc` file if the file exists.
 
 It won't work right away since your `~/.bashrc` is only read when you open a new shell. We can open a new shell by typing 
 
@@ -37,8 +37,8 @@ It won't work right away since your `~/.bashrc` is only read when you open a new
 bash
 ``` 
 
-or source the `/path/to/bash-bashrc/bashrc` file manually in the current shell by executing
+or source the `/path/to/bashrc/bashrc` file manually in the current shell by executing
 
 ```
-. /path/to/bash-bashrc/bashrc
+. /path/to/bashrc/bashrc
 ```
