@@ -7,6 +7,17 @@
 # User specific aliases and functions
 #################################################################
 
+# long bash history
+export HISTSIZE=1000000
+export HISTFILESIZE=1000000000
+
+# add timestamp to history
+export HISTTIMEFORMAT="%F %T "
+
+# append history from multiple sessions
+# https://askubuntu.com/questions/80371/bash-history-handling-with-multiple-terminals
+export PROMPT_COMMAND='history -a'
+
 # docker cleanup
 function dclean() {
     echo "+ docker rm $(docker ps -aq --filter 'status=exited')" && docker rm $(docker ps -aq --filter 'status=exited') 2&>/dev/null
